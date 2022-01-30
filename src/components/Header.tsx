@@ -65,7 +65,7 @@ export function Header() {
             </Text>
           </Box>
 
-          <Avatar size="lg" name="Raphael Lahiry" bg="pink.500" src="https://wallpaperaccess.com/full/401134.jpg" />
+          <Avatar size="md" name="Raphael Lahiry" bg="pink.500" src="https://github.com/Lahiry.png" />
         </Flex>        
       </Flex>
     </Flex>
