@@ -10,9 +10,9 @@ import { Search } from "./Search";
 export function Header() {
   const { onOpen } = useSidebarDrawer()
 
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    lg: true
+  const isMobileVersion = useBreakpointValue({
+    base: true,
+    lg: false
   })
 
   return (
@@ -26,7 +26,7 @@ export function Header() {
       px="6"
       align="center"
     >
-      { !isWideVersion && (
+      { isMobileVersion && (
         <IconButton
           aria-label="Open navigation"
           icon={<Icon as={RiMenuLine} />}
@@ -41,11 +41,11 @@ export function Header() {
 
       <Logo />
 
-      { isWideVersion && <Search /> }
+      { !isMobileVersion && <Search /> }
 
       <Flex align="center" ml="auto">
         <NotificationsNav />
-        <Profile showProfileData={isWideVersion} />        
+        <Profile showProfileData={!isMobileVersion} />        
       </Flex>
     </Flex>
   );
