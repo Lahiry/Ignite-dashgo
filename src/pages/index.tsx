@@ -4,7 +4,7 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Input } from '../components/Form/Input'
 
-type SignInData = {
+type SignInFormData = {
   email: string;
   password: string;
 };
@@ -21,7 +21,7 @@ export default function SignIn() {
 
   const { errors } = formState
 
-  const handleSignIn: SubmitHandler<SignInData> = async (values) => {
+  const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log(values);
   }
